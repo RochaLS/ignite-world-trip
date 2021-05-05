@@ -1,7 +1,7 @@
-import { Heading } from '@chakra-ui/react'
+import { Header } from '../components/Header/index'
 
 export default function Home() {
   return (
-   <Heading>Hello World</Heading>
+   <Header />
   )
 }
