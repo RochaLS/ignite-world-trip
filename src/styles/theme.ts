@@ -9,6 +9,7 @@ export const theme = extendTheme({
       500: 'rgba(255, 186, 8, 0.5)'
     },
     gray: {
+      300: '#DADADADA',
       500: '#999999',
       800: '#47585B',
     },
