@@ -1,6 +1,6 @@
 import { Header } from '../components/Header/index'
 import { HomeBanner } from '../components/HomeBanner'
-import { HStack, Flex, Heading, Box, Divider} from '@chakra-ui/react'
+import { HStack, Flex, Heading, Box, Divider, Text} from '@chakra-ui/react'
 import { Icon } from '../components/Icon'
 import { HomeSwiper } from '../components/HomeSwiper'
 
@@ -29,6 +29,9 @@ export default function Home() {
         </Flex>
         <HomeSwiper />
       </Box>
+      <Flex my='8' align='center' justify='center'>
+        <Text>Made by Lucas Rocha 🚀</Text>
+      </Flex>
     </>
   )
 }
