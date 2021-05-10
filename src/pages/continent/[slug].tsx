@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header'
-import { Box, Flex, Heading, HStack, Text, Tooltip, Image, SimpleGrid } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Text, Tooltip, Image, SimpleGrid, Center} from '@chakra-ui/react'
 import { ContinentBanner } from '../../components/ContinentBanner'
 import { ContinentIcon } from '../../components/ContinentIcon'
 import { Card } from '../../components/Card'
@@ -63,6 +63,7 @@ export default function Continent() {
           flagUrl='ireland.svg' />
       </SimpleGrid>
     </Box>
+    <Center>Created by Lucas Rocha 🚀</Center>
     </>
   )
 }
