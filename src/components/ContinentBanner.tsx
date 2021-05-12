@@ -4,17 +4,18 @@ export function ContinentBanner() {
   return (
     <Box
       w='100wh'
-      h='500px'
+      h={['150px','500px']}
       bgImage="url('/images/continents/europe2.png')"
       bgSize='cover'
-      bgPosition='center'>
-      <Flex alignItems='flex-end' h='500px'>
+      bgPosition='center'
+    >
+      <Flex alignItems={['center','flex-end']} justify='center' h={['150px','500px']}>
         <Heading
           fontWeight='500'
           color='white'
           size='2xl'
-          mb='100px'
-          ml='60px'>
+          mb={['0', '100px']}
+          >
           Europa
         </Heading>
       </Flex>

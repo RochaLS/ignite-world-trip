@@ -10,7 +10,7 @@ export function ContinentIcon({ heading, text }: ContinentIconProps) {
   return (
     <Box>
       <Heading color='yellow.500' textAlign='center'>{heading}</Heading>
-      <Text fontWeight='600'>{text}</Text>
+      <Text textAlign='center' fontWeight='600'>{text}</Text>
     </Box>
   )
 }
