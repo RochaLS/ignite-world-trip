@@ -2,13 +2,18 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
-import { Text, Box, Flex, Link as ChakraLink, Heading } from '@chakra-ui/react'
+import { Text, Box, Flex, Link as ChakraLink, Heading, useBreakpointValue } from '@chakra-ui/react'
 import Link from 'next/link'
 
 //Install swiper modules
 SwiperCore.use([Navigation, Pagination])
 
 export function HomeSwiper() {
+
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   
   const slides: React.ReactElement[] = []
   const images = [
@@ -30,12 +35,12 @@ export function HomeSwiper() {
     { 
       url: 'africa.jpg',
       heading: 'África',
-      text: 'Desfrute da natureza e diversos animais.'
+      text: 'Desfrute da natureza.'
     }, 
     {
       url: 'north-america.jpg',
       heading: 'América do Norte',
-      text: 'Um continente com diversas maravilhas naturais.'
+      text: 'Visite maravilhas naturais.'
     }, 
     { 
       url: 'oceania.jpg',
@@ -51,7 +56,7 @@ export function HomeSwiper() {
         <Flex
           direction='column'
           width='100%'
-          height='450px'
+          height={['250px','450px']}
           align='center'
           justify='center'
           bgImage={`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),${imgUrl}`}
@@ -61,8 +66,11 @@ export function HomeSwiper() {
         >
           <Link href='/continent/europe'>
             <ChakraLink>
-              <Heading size='2xl' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
-              <Text fontSize='2xl' fontWeight='700' color='gray.300'>{images[i].text}</Text>
+              { isWideVersion
+                ?  <Heading size='2xl' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
+                : <Heading size='lg' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
+              }
+              <Text fontSize={['md','2xl']} fontWeight='700' color='gray.300'>{images[i].text}</Text>
             </ChakraLink>
           </Link>
         </Flex>
@@ -70,7 +78,7 @@ export function HomeSwiper() {
    )
   }
   return (
-    <Box mx='150'>
+    <Box mx={['0','150']}>
       <Swiper
         navigation
         pagination={{clickable: true}}
