@@ -71,10 +71,25 @@ export function HomeSwiper() {
               }}
             >
               { isWideVersion
-                ?  <Heading size='2xl' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
-                : <Heading size='lg' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
+                ?  <Heading
+                    size='2xl'
+                    fontWeight='700'
+                    color='gray.100'>
+                      {images[i].heading}
+                  </Heading>
+                : <Heading
+                    size='lg'
+                    fontWeight='700'
+                    color='gray.100'>
+                      {images[i].heading}
+                  </Heading>
               }
-              <Text fontSize={['md','2xl']} fontWeight='700' color='gray.300'>{images[i].text}</Text>
+              <Text
+                fontSize={['md','2xl']}
+                fontWeight='700'
+                color='gray.300'>
+                  {images[i].text}
+              </Text>
             </ChakraLink>
           </Link>
         </Flex>
