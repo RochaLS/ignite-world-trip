@@ -13,7 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <HomeBanner />
       <Box mx={['0','5']} mb='8'>
         { isWideVersion ?

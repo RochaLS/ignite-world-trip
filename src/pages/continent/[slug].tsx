@@ -7,7 +7,6 @@ import { Card } from '../../components/Card'
 export default function Continent() {
   return (
     <>
-    <Header />
     <ContinentBanner />
     <Box m={['10','20']}>
       <Stack spacing={['50px','250px']} direction={['column', 'row']}>
