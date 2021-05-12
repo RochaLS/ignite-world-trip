@@ -65,7 +65,11 @@ export function HomeSwiper() {
           textAlign='center'
         >
           <Link href='/continent/europe'>
-            <ChakraLink>
+            <ChakraLink
+              _hover={{
+                textDecoration: 'none'
+              }}
+            >
               { isWideVersion
                 ?  <Heading size='2xl' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
                 : <Heading size='lg' fontWeight='700' color='gray.100'>{images[i].heading}</Heading>
